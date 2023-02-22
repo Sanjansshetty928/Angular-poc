@@ -1,0 +1,34 @@
+<!-- <div>{{'Server'}} with Id {{serverId}} is {{getMethodStatus()}}</div> -->
+<!-- property binding for disabled -->
+<!-- (click) is event binding -->
+<!-- <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
+<p>{{serverCreationStatus}}</p>
+<p [innerText]="allowNewServer"></p> -->
+
+<!-- <label>Server Name</label> -->
+<!-- this uses two way binding -->
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
+<!-- this is not usin  g two way binding -->
+ <!-- <input type="text" class="form-control" [(ngModel)]="serverName"> -->
+<!-- structural directive  -->
+<!-- <p *ngIf="serverCreated;else noServer">server name was created {{serverName}}</p> -->
+<!-- <ng-template #noServer> -->
+    <!-- <p>No server was created</p> -->
+<!-- </ng-template> -->
+<!-- <button class="btn btn-secondary" [disabled]="!serverName" (click)="onCreateServer()" >Add</button> -->
+
+<!-- <input type="text" class="form-control" [(ngModel)]="userName"> -->
+<!-- <p *ngIf="serverCreated">{{userName}}</p> -->
+<!-- <button class="btn btn-secondary" [disabled]="!userName" (click)="clearString()" >Add</button> --> 
+<!-- <input type="text" class="form-control" [(ngModel)]="userName">
+<button type="btn btn-primary" (click)="ngOnChange()">update</button> -->
+
+<label>Server Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
+<p *ngIf="serverCreated;else noServer">server name was created {{serverName}}</p>
+
+<ng-template #noServer>
+    <p>No server was created</p> 
+</ng-template>
+<app-warning-alert *ngFor="let server of servers"></app-warning-alert>

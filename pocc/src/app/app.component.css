@@ -1,0 +1,40 @@
+
+
+/* header{
+    margin: 1%;
+} */
+header{
+    background-color: rgb(12, 136, 14);
+}
+h1{
+    margin:0;
+    /* padding: 1%; */
+    text-align: center;
+    color:  #ffffff;
+}
+main{
+    min-height: 490px;
+    background-image: repeating-linear-gradient(green,white ,yellow);
+}
+a:hover{
+    color: rgb(0, 255, 234);
+}
+b:hover{
+    color:blue
+}
+
+footer p{
+    color: red;
+    color:blueviolet !important
+}
+
+.copyright{
+    color: darkgreen;
+}
+.text{
+    color:black
+}
+
+/* #copyright{
+    color: darkcyan;
+} */
