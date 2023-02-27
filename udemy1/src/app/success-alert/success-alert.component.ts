@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuccessAlertComponent implements OnInit {
   allowNewServer=false;
+  showSecret=false;
+  log:Date[]=[];
+  // date:Date[]=[];    
   serverCreationStatus='no server was created'
   serverName='';
   serverCreated=false;
@@ -41,10 +44,19 @@ userName='';
   // clearString(){
   //   this.userName='';
   // }
-  serverId=101;
-  serverStatus='401';
-  getMethodStatus(){
-    return this.serverStatus;
-  }
+  // serverId=101;
+  // serverStatus='401';
+  // getMethodStatus(){
+  //   return this.serverStatus;
+  // }
+  toggleDisplay(){
+    this.showSecret=!this.showSecret;
+    // var x = this.log.length + 1;
+    // this.log.push(x);
+    const y=new Date();
+    this.log.push(y);
+    // this.log.push(this.date);
+  
+  } 
 
 }

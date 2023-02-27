@@ -8,7 +8,7 @@
 <!-- <label>Server Name</label> -->
 <!-- this uses two way binding -->
 <!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)"> -->
-<!-- this is not usin  g two way binding -->
+<!-- this is not using two way binding -->
  <!-- <input type="text" class="form-control" [(ngModel)]="serverName"> -->
 <!-- structural directive  -->
 <!-- <p *ngIf="serverCreated;else noServer">server name was created {{serverName}}</p> -->
@@ -32,3 +32,9 @@
     <p>No server was created</p> 
 </ng-template>
 <app-warning-alert *ngFor="let server of servers"></app-warning-alert>
+<!-- <button class="btn btn-primary" (click)="showSecret=!showSecret">Display details</button> -->
+<button class="btn btn-primary" (click)="toggleDisplay()">Display details</button>
+
+<p *ngIf="showSecret">Secret Password=tuna</p>
+<div *ngFor="let logItem of log;let i=index" 
+[ngStyle]="{backgroundColor:i>=4 ?'blue':'transparent'}" [ngClass]="{'white-text':i>=4}">{{logItem}}</div>
