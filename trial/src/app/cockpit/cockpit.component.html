@@ -2,16 +2,18 @@
     <div class="col-xs-12">
         <p>Add new Servers or blueprint</p>
         <label>Server Name</label>
-        <input type="text" class="form-control" [(ngModel)]="newServerName">
+        <input type="text" class="form-control"  #serverNameInput>
+        <!-- local references-serverNameInput -->
         <label>Server Content</label>
-        <input type="text" class="form-control" [(ngModel)]="newServerContent">
+        <!-- [(ngModel)]="newServerContent" -->
+        <input type="text" class="form-control" #serverContentInput>
         <br>
        
-            
-                <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+             
+                <button class="btn btn-primary" (click)="onAddServer(serverContentInput)">Add Server</button>
                 <!-- to get spacing between two buttons -->
                  &nbsp;
-                <button class="btn btn-primary" (click)="onAddBlueprint()">Add blueprint</button>
+                <button class="btn btn-primary" (click)="onAddBlueprint(serverContentInput)">Add blueprint</button>
       
     </div>
 </div> 

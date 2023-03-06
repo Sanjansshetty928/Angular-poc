@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'udemy1';
   servers:string[]=[];
-  
+  userName:string='';  
   onAddServer(){
     const x='Another server'
     this.servers.push(x);
@@ -17,4 +17,10 @@ export class AppComponent {
     const position=id+1;
     this.servers.splice(position,1);
   }
+
+ add(){
+  let x=this.userName.toLowerCase();
+  console.log(x);
+ }
+
 }

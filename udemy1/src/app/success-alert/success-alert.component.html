@@ -25,8 +25,10 @@
 
 <label>Server Name</label>
 <input type="text" class="form-control" [(ngModel)]="serverName">
-<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add server</button>
-<p *ngIf="serverCreated;else noServer">server name was created {{serverName}}</p>
+<button class="btn btn-primary" [disabled]="allowNewServer" (click)="onCreateServer()">Add server</button>
+<p *ngIf="serverCreated;
+else
+ noServer">server name was created {{serverName}}</p>
 
 <ng-template #noServer>
     <p>No server was created</p> 
@@ -38,3 +40,4 @@
 <p *ngIf="showSecret">Secret Password=tuna</p>
 <div *ngFor="let logItem of log;let i=index" 
 [ngStyle]="{backgroundColor:i>=4 ?'blue':'transparent'}" [ngClass]="{'white-text':i>=4}">{{logItem}}</div>
+

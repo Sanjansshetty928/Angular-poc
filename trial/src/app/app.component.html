@@ -5,7 +5,16 @@
    <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement"></app-server-element>
+      <button class="btn btn-primary" (click)="onChangeFirst()">Change first element</button>
+      <button class="btn btn-danger" (click)="onDestroy()">Destroy component</button>
+      <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement"
+      [name]="serverElement.name">
+
+        <p #paragraph>
+          <strong *ngIf="serverElement.type==='server'" style="color:red">{{serverElement.content}}</strong>
+          <em *ngIf="serverElement.type==='blueprint'" style="color: black;">{{serverElement.content}}</em>
+      </p>
+      </app-server-element>
     </div>
   </div>
 </div>
@@ -17,3 +26,13 @@
 <!-- <input type="text" class="form-control" name="userName" [(ngModel)]="userName">
 <p>{{userName}}</p>
 <button class="btn btn-primary" [disabled]="!userName" (click)="reset()">Reset user</button> -->
+<button class="btn btn-primary"(click)="onlyOdd=!onlyOdd">Show numbers</button>
+<div *ngIf="onlyOdd">
+  <li class="list-item" *ngFor="let odd of Numbers" [ngClass]="{odd:odd%2!=0}" [ngStyle]="{backgroundColor:odd%2!=0 ? 'white':'blue'}">{{odd}}</li>
+
+</div>
+<div *ngIf="!onlyOdd">
+  <li class="list-item" *ngFor="let even of isEven()"[ngClass]="{even:even%2==0}">{{even}}</li>
+
+</div>
+<p appBasicHighlight [ngStyle]="{backgroundColor:'red'}">example of directive working in angular</p>

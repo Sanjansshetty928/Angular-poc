@@ -17,8 +17,8 @@ export class SuccessAlertComponent implements OnInit {
 
 userName='';
   constructor(){
-    setTimeout(()=>{this.allowNewServer=true;
-    },5000)
+    // setTimeout(()=>{this.allowNewServer=true;
+    // },5000)
   }
   ngOnInit(): void {
     

@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BasicHighDirective } from './basic-highlight/basic-highlight.directive';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 
@@ -11,7 +12,8 @@ import { ServerElementComponent } from './server-element/server-element.componen
   declarations: [
     AppComponent,
     CockpitComponent,
-    ServerElementComponent
+    ServerElementComponent,
+    BasicHighDirective
   ],
   imports: [
     BrowserModule,
