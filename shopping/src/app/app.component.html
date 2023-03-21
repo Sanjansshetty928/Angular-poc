@@ -1,14 +1,30 @@
+<!-- <div class="row">
+<div class="col-md-2">
+  <input type="text" class="form-control" [(ngModel)]="filteredStatus">
+<li class="list-group-item" *ngFor="let server of servers|filter:filteredStatus:'status'|sort:'serverName'">
+  <span>{{server.status|reverse}}</span>
+  <p>{{server.serverName}}</p>
+</li>
+<button  class="btn btn-success" (click)="onAddServer()">Add</button>
+</div>
+</div>
+<br>
+<p>{{appStatus|async}}</p> -->
+
+
 <div>
-  <app-header (featureSelected)="onNavigate($event)"></app-header>
+  <app-header></app-header>
 
 </div>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="loadedFeature==='recipe'"></app-recipes>
-      <app-shopping-list *ngIf="loadedFeature!=='recipe'"></app-shopping-list>
+      <router-outlet></router-outlet>
+      <!-- <app-recipes *ngIf="loadedFeature==='recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature!=='recipe'"></app-shopping-list> -->
     </div>
     
   </div>
 </div>
+
 
