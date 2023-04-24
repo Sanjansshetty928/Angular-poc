@@ -8,21 +8,26 @@ import { Recipe } from "./recipe.model";
 export class RecipeService{
   recipeChanged=new Subject<Recipe[]>();
     // recipeSelected=new Subject<Recipe>();
-  private  recipes:Recipe[]=[
-        new Recipe('A test Recipe','This is simply a test','https://www.tasteofhome.com/wp-content/uploads/2017/09/exps23273_CW163681C12_11_2b.jpg',
-        [
-          new Ingredient('Meat',1),
-          new Ingredient('chicken',4)
-        ]),
-        new Recipe('A simple Recipe','This is sample test','https://www.bing.com/th?id=OIP.PYipJ_hSncugM2SwnZitvgHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2',
-        [
-          new Ingredient('Fish',2),
-          new Ingredient('mutton',6)
-        ])
+  // private  recipes:Recipe[]=[
+  //       new Recipe('A test Recipe','This is simply a test','https://www.tasteofhome.com/wp-content/uploads/2017/09/exps23273_CW163681C12_11_2b.jpg',
+  //       [
+  //         new Ingredient('Meat',1),
+  //         new Ingredient('chicken',4)
+  //       ]),
+  //       new Recipe('A simple Recipe','This is sample test','https://www.bing.com/th?id=OIP.PYipJ_hSncugM2SwnZitvgHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2',
+  //       [
+  //         new Ingredient('Fish',2),
+  //         new Ingredient('mutton',6)
+  //       ])
     
-      ];
+  //     ];
+  private recipes:Recipe[]=[];
    recipeSelected: any;
       constructor(private slService:ShoppingListService){}
+      setRecipes(recipe:Recipe[]){
+        this.recipes=recipe;
+this.recipeChanged.next(this.recipes.slice())
+      }
       getRecipes(){
         return this.recipes.slice();
       }

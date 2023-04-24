@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  Numbers=[1,2,3,4,5,6,7,8,9,10]
+  // Numbers=[1,2,3,4,5,6,7,8,9,10]
   onlyOdd=false;
+  value='';
+evenNumbers=[2,4]
+oddNumbers=[1,3,5]
+   @ViewChild('clickChange', {static: true}) elementRef: ElementRef;
+  //  constructor(private elementRef:ElementRef){}
   
   // userName:string='';
   ngOnInit(): void {
@@ -17,9 +22,9 @@ export class AppComponent implements OnInit {
   // reset(){
   //   this.userName='';
   // }
-  isEven(){
-    return this.Numbers.filter(n=>n%2==0);
-  }
+  // isEven(){
+  //   return this.Numbers.filter(n=>n%2==0);
+  // }
 
   title = 'trial';
   // message:string='kiccha';
@@ -49,6 +54,15 @@ export class AppComponent implements OnInit {
   onDestroy(){
     this.serverElements.splice(0,1);
   }
+  onClick(){
+    console.log("--------------->>   called")
+    this.elementRef.nativeElement.style.backgroundColor='green';
+    // console.log(this.elementRef)
+}
+// onDestroy(){
+//   this.Numbers.splice(2,3);
+// }
+
 }
 
 

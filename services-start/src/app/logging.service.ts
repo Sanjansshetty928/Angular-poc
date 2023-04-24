@@ -1,0 +1,7 @@
+
+
+export class LoginingService{
+    logStatusChange(status:string){
+        console.log('a server status changed,new status: ' +status);
+    }
+}

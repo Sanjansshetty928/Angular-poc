@@ -1,0 +1,100 @@
+[
+    {
+        "firstName": "Appa",
+        "age": 21,
+        "branch": "CS",
+        "rollno": 2
+    },
+    {
+        "firstName": "Sushan",
+        "age": 20,
+        "branch": "EC",
+        "rollno": 3
+    },
+    {
+        "firstName": "Umesh",
+        "age": 22,
+        "branch": "IS",
+        "rollno": 4
+    },
+    {
+        "firstName": "Abhinav",
+        "age": 12,
+        "branch": "IS",
+        "rollno": 5
+    },
+    {
+        "firstName": "Simha",
+        "age": 22,
+        "branch": "MECH",
+        "rollno": 6
+    },
+    {
+        "firstName": "Jacqliene",
+        "age": 22,
+        "branch": "EEE",
+        "rollno": 20
+    },
+    {
+        "firstName": "Jack",
+        "age": 22,
+        "branch": "IS",
+        "rollno": 7
+    },
+    {
+        "firstName": "Thippu",
+        "age": 22,
+        "branch": "CS",
+        "rollno": 8
+    },
+    {
+        "firstName": "Yashas",
+        "age": 29,
+        "branch": "EC",
+        "rollno": 9
+    },
+    {
+        "firstName": "Kiccha",
+        "age": 22,
+        "branch": "EC",
+        "rollno": 10
+    },
+    {
+        "firstName": "Sudeep",
+        "age": 30,
+        "branch": "MECH",
+        "rollno": 11
+    },
+    {
+        "firstName": "Abhinav",
+        "age": 9,
+        "branch": "CS",
+        "rollno": 12
+    },
+    {
+        "firstName": "Chinnu",
+        "age": 28,
+        "branch": "EC",
+        "rollno": 13
+    },
+    {
+        "firstName": "Abhinav",
+        "age": 27,
+        "branch": "EEE",
+        "rollno": 14
+    },
+    {
+        "firstName": "Shetty",
+        "age": 23,
+        "branch": "MECH",
+        "rollno": 15
+    },
+    {
+        "firstName": "Sanjan",
+        "age": 26,
+        "branch": "Non-Medical",
+        "rollno": 16
+    }
+    
+   
+]

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -13,34 +14,38 @@ export class AppComponent {
   })
   title = 'shopping';
   loadedFeature='recipe';
-
-  onNavigate(feature:string){
-    this.loadedFeature=feature;
-    console.log(this.loadedFeature)
-  }
-  servers=[
-    {
-      serverName:'linux',
-      status:'offline'
-    },
-    {
-      serverName:'Idea',
-      status:'offline'
-    },
-    {
-      serverName:'lenovi',
-      status:'offline'
-    },
-    {
-      serverName:'li',
-      status:'online'
-    },
-  ]
-  filteredStatus='';
-  onAddServer(){
-    this.servers.push({
-      serverName:'sanjan',
-      status:'offline'
-    })
-  }
+constructor(private authService:AuthService){}
+ngOnInit(){
+  this.authService.autoLogin();
 }
+  // onNavigate(feature:string){
+  //   this.loadedFeature=feature;
+  //   console.log(this.loadedFeature)
+  // }
+  // servers=[
+  //   {
+  //     serverName:'linux',
+  //     status:'offline'
+  //   },
+  //   {
+  //     serverName:'Idea',
+  //     status:'offline'
+  //   },
+  //   {
+  //     serverName:'lenovi',
+  //     status:'offline'
+  //   },
+  //   {
+  //     serverName:'li',
+  //     status:'online'
+  //   },
+  // ]
+  // filteredStatus='';
+  // onAddServer(){
+  //   this.servers.push({
+  //     serverName:'sanjan',
+  //     status:'offline'
+  //   })
+
+  }
+
